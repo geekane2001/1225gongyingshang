@@ -2,11 +2,10 @@ import { defineConfig, loadEnv } from 'vite'
 import path from 'path'
 import createVitePlugins from './vite/plugins'
 
-const baseUrl = 'http://1225gy.jingchaowan.dpdns.org' // 真实后端接口地址
+const baseUrl = 'https://1225gy.jingchaowan.dpdns.org' // 真实后端接口地址
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, command }) => {
-  const env = loadEnv(mode, process.cwd())
   const { VITE_APP_ENV } = env
   return {
     // 部署生产环境和开发环境下的URL。
